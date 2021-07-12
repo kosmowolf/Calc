@@ -5,16 +5,25 @@
     android:id="@+id/mc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@mipmap/calculator_budget">
+    android:background="@mipmap/calculator_budget"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editText"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="please enter" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:ems="10"
+            android:hint="please enter"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,59 +31,49 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        >
-
         <Button
             android:id="@+id/button_c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="c"
-            android:background="#CCFF0000"/>
+            android:text="c" />
 
         <Button
-            android:id="@+id/button_xing"
+            android:id="@+id/button_multiple"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="*"
-            android:background="#CCFF0000" />
+            android:text="*" />
 
         <Button
-            android:id="@+id/button_chu"
+            android:id="@+id/button_divide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="/"
-            android:background="#CCFF0000"/>
+            android:text="/" />
 
         <Button
-            android:id="@+id/button_xiaoyu"
+            android:id="@+id/button_less"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="&lt;"
-            android:background="#CCFF0000"/>
+            android:text="&lt;" />
     </LinearLayout>
 
     <LinearLayout
@@ -89,10 +88,10 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="7"
-            android:background="#CCFF0000"/>
+            android:text="7" />
 
         <Button
             android:id="@+id/button_8"
@@ -100,10 +99,10 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="8"
-            android:background="#CCFF0000"/>
+            android:text="8" />
 
         <Button
             android:id="@+id/button_9"
@@ -111,21 +110,21 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="9"
-            android:background="#CCFF0000"/>
+            android:text="9" />
 
         <Button
-            android:id="@+id/button_jian"
+            android:id="@+id/button_minus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="-"
-            android:background="#CCFF0000"/>
+            android:text="-" />
     </LinearLayout>
 
     <LinearLayout
@@ -140,10 +139,10 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="4"
-            android:background="#CCFF0000"/>
+            android:text="4" />
 
         <Button
             android:id="@+id/button_5"
@@ -151,10 +150,10 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="5"
-            android:background="#CCFF0000"/>
+            android:text="5" />
 
         <Button
             android:id="@+id/button_6"
@@ -162,21 +161,21 @@
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="6"
-            android:background="#CCFF0000"/>
+            android:text="6" />
 
         <Button
-            android:id="@+id/button_jia"
+            android:id="@+id/button_plus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
+            android:background="#CCFF0000"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="+"
-            android:background="#CCFF0000"/>
+            android:text="+" />
     </LinearLayout>
 
     <LinearLayout
@@ -209,10 +208,10 @@
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
                         android:layout_weight="1"
+                        android:background="#CCFF0000"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
-                        android:text="1"
-                        android:background="#CCFF0000"/>
+                        android:text="1" />
 
                     <Button
                         android:id="@+id/button_2"
@@ -220,10 +219,10 @@
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
                         android:layout_weight="1"
+                        android:background="#CCFF0000"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
-                        android:text="2"
-                        android:background="#CCFF0000"/>
+                        android:text="2" />
 
                     <Button
                         android:id="@+id/button_3"
@@ -231,10 +230,10 @@
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
                         android:layout_weight="1"
+                        android:background="#CCFF0000"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
-                        android:text="3"
-                        android:background="#CCFF0000"/>
+                        android:text="3" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -249,21 +248,21 @@
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
                         android:layout_weight="2"
+                        android:background="#CCFF0000"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
-                        android:text="0"
-                        android:background="#CCFF0000"/>
+                        android:text="0" />
 
                     <Button
-                        android:id="@+id/button_dian"
+                        android:id="@+id/button_point"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_margin="2dp"
                         android:layout_weight="1"
+                        android:background="#CCFF0000"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
-                        android:text="."
-                        android:background="#CCFF0000"/>
+                        android:text="." />
                 </LinearLayout>
 
             </LinearLayout>
@@ -277,15 +276,15 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_dengyu"
+                android:id="@+id/button_equal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
+                android:background="#CCFF0000"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:text="="
-                android:background="#CCFF0000"/>
+                android:text="=" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
