@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            System.out.println("Пусто!!!!!");
 //            return;
 //        }
-        String str = (String) my_result.getText().toString();
+        //String str = (String) my_result.getText().toString();
+        String str = ((EditText)findViewById(R.id.editText)).getText().toString();
+        EditText my_result = (EditText) findViewById(R.id.editText);
         switch (v.getId()) {
             case R.id.button_0:
             case R.id.button_1:
