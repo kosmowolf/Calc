@@ -159,7 +159,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void getResult() {
-        String exp = my_result.getText().toString();
+        //String exp = my_result.getText().toString();
+        String exp = ((EditText)findViewById(R.id.editText)).getText().toString();
+        EditText my_result = (EditText) findViewById(R.id.editText);
         if (exp == null || exp.equals("")) {
             return;
         }
