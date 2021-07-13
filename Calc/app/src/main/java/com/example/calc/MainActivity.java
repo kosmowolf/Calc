@@ -3,6 +3,7 @@ package com.example.calc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button_0; // 0
     Button button_point; // .
     Button button_equal; // =
-    EditText result;
+    EditText my_result;
 
     // Признак, что поле редактирования текста очищено
     boolean is_clear;
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button_0 = (Button) findViewById(R.id.button_0);
         Button button_point = (Button) findViewById(R.id.button_point);
         Button button_equal = (Button) findViewById(R.id.button_equal);
-        EditText result = (EditText) findViewById(R.id.editText);
-        System.out.println(result.length());
+        EditText my_result = (EditText) findViewById(R.id.editText);
+        System.out.println(my_result.length());
 
         // Устанавливаем объект нажатия на кнопку
 
@@ -85,7 +86,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        String str = result.getText().toString();
+
+        // Проверяем поля на пустоту
+//        if (TextUtils.isEmpty(my_result.getText().toString())) {
+//            Log.d("homework_3", "  Пусто!!!! ");
+//            System.out.println("Пусто!!!!!");
+//            return;
+//        }
+        String str = (String) my_result.getText().toString();
         switch (v.getId()) {
             case R.id.button_0:
             case R.id.button_1:
@@ -97,32 +105,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_7:
             case R.id.button_8:
             case R.id.button_9:
-                if (result.length() == 0) {
+                if (my_result.length() == 0) {
 
                     str = "";
-                    result.setText("");
+                    my_result.setText("");
 
                 }
 
-                result.setText(str + ((Button) v).getText());
+                my_result.setText(str + ((Button) v).getText());
                 break;
 
 
             case R.id.button_point:
-                if (result.length() == 0) {
+                if (my_result.length() == 0) {
                     return;
                 } else {
                     Log.d("homework_3", "aaa");
-                    result.setText(str + ((Button) v).getText());
+                    my_result.setText(str + ((Button) v).getText());
                     break;
                 }
             case R.id.button_less:
                 if (is_clear) {
                     is_clear = false;
                     str = "";
-                    result.setText("");
+                    my_result.setText("");
                 } else if (str != null && !str.equals("")) {
-                    result.setText(str.substring(0, str.length() - 1));
+                    my_result.setText(str.substring(0, str.length() - 1));
                 }
                 break;
 
@@ -130,16 +138,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_minus:
             case R.id.button_multiple:
             case R.id.button_divide:
-                if (result.length() == 0) {
+                if (my_result.length() == 0) {
                     str = "";
-                    result.setText("");
+                    my_result.setText("");
                 }
-                result.setText(str + " " + ((Button) v).getText() + " ");
+                my_result.setText(str + " " + ((Button) v).getText() + " ");
                 break;
 
             case R.id.button_c:
                 is_clear = false;
-                result.setText("");
+                my_result.setText("");
             case R.id.button_equal:
                 Log.d("homework_3", "=");
                 getResult();
@@ -149,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void getResult() {
-        String exp = result.getText().toString();
+        String exp = my_result.getText().toString();
         if (exp == null || exp.equals("")) {
             return;
         }
@@ -176,25 +184,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Result = d1 + d2;
                 String o = String.valueOf(Result);
                 Log.d("homework_3", o);
-                result.setText(o);
+                my_result.setText(o);
                 return;
             } else if (op.equals("-")) {
                 Result = d1 - d2;
                 String o = String.valueOf(Result);
                 Log.d("homework_3", o);
-                result.setText(o);
+                my_result.setText(o);
                 return;
             } else if (op.equals("*")) {
                 Result = d1 * d2;
                 String o = String.valueOf(Result);
                 Log.d("homework_3", o);
-                result.setText(o);
+                my_result.setText(o);
                 return;
             } else if (op.equals("/")) {
                 Result = d1 / d2;
                 String o = String.valueOf(Result);
                 Log.d("homework_3", o);
-                result.setText(o);
+                my_result.setText(o);
                 return;
             }
 
