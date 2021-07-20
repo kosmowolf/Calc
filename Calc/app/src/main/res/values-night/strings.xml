@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnNamePlus">+</string>
+    <string name="btnName6">6</string>
+    <string name="btnName5">5</string>
+    <string name="btnNameMinus">-</string>
+    <string name="btnName9">9</string>
+    <string name="btnName8">8</string>
+    <string name="btnName7">7</string>
+    <string name="btnNameBksp"><![CDATA[&lt;]]></string>
+    <string name="btnNameDivide">/</string>
+    <string name="btnNameMltpl">*</string>
+    <string name="btnNameC">c</string>
+    <string name="btnName1">1</string>
+    <string name="btnName2">2</string>
+    <string name="btnName3">3</string>
+    <string name="btnName0">0</string>
+    <string name="btnNamePoint">.</string>
+    <string name="btnNameEqual">=</string>
+</resources>
