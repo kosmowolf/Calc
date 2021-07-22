@@ -2,12 +2,14 @@ package com.example.calc2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     // Создать объект Button
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button_point; // .
     Button button_equal; // =
     EditText my_result;
+    ImageButton settingsButton;
 
     // Признак, что поле редактирования текста очищено
     boolean is_clear;
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button_0 = (Button) findViewById(R.id.button_0);
         Button button_point = (Button) findViewById(R.id.button_point);
         Button button_equal = (Button) findViewById(R.id.button_equal);
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.settingsButton);
         EditText my_result = (EditText) findViewById(R.id.editText);
         System.out.println(my_result.length());
 
@@ -82,20 +86,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_0.setOnClickListener(this);
         button_point.setOnClickListener(this);
         button_equal.setOnClickListener(this);
+        settingsButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        // Проверяем поля на пустоту
-//        if (TextUtils.isEmpty(my_result.getText().toString())) {
-//            Log.d("homework_3", "  Пусто!!!! ");
-//            System.out.println("Пусто!!!!!");
-//            return;
-//        }
-        //String str = (String) my_result.getText().toString();
         String str = ((EditText)findViewById(R.id.editText)).getText().toString();
         EditText my_result = (EditText) findViewById(R.id.editText);
+        Intent intent;
         switch (v.getId()) {
             case R.id.button_0:
             case R.id.button_1:
@@ -153,6 +152,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_equal:
                 Log.d("homework_3", "=");
                 getResult();
+                break;
+            case R.id.settingsButton:
+                intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
                 break;
         }
 
