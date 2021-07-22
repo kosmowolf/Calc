@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Calc2</string>
+    <string name="welcomeText">please enter</string>
+    <string name="btnNamePlus" translatable="false">+</string>
+    <string name="btnName6" translatable="false">6</string>
+    <string name="btnName5" translatable="false">5</string>
+    <string name="btnName4" translatable="false">4</string>
+    <string name="btnNameMinus" translatable="false">-</string>
+    <string name="btnName9" translatable="false">9</string>
+    <string name="btnName8" translatable="false">8</string>
+    <string name="btnName7" translatable="false">7</string>
+    <string name="btnNameBksp" translatable="false">&lt;</string>
+    <string name="btnNameDivide" translatable="false">/</string>
+    <string name="btnNameMltpl" translatable="false">*</string>
+    <string name="btnNameC" translatable="false">c</string>
+    <string name="btnName1" translatable="false">1</string>
+    <string name="btnName2" translatable="false">2</string>
+    <string name="btnName3" translatable="false">3</string>
+    <string name="btnName0" translatable="false">0</string>
+    <string name="btnNamePoint" translatable="false">.</string>
+    <string name="btnNameEqual" translatable="false">=</string>
+</resources>
